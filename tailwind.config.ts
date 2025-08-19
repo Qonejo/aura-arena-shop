@@ -61,7 +61,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Gaming colors
+				neon: {
+					green: 'hsl(var(--neon-green))',
+					cyan: 'hsl(var(--neon-cyan))',
+					purple: 'hsl(var(--neon-purple))',
+					yellow: 'hsl(var(--neon-yellow))',
+					pink: 'hsl(var(--neon-pink))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				}
+			},
+			fontFamily: {
+				pixel: ['"Press Start 2P"', 'monospace'],
+			},
+			backgroundImage: {
+				'gradient-aura': 'var(--gradient-aura)',
+				'gradient-level': 'var(--gradient-level)',
+				'gradient-gaming': 'var(--gradient-gaming)'
+			},
+			boxShadow: {
+				'aura': 'var(--glow-aura)',
+				'level': 'var(--glow-level)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
