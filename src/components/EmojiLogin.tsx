@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+import MatrixBackground from "./MatrixBackground";
 
 const availableEmojis = ["😀", "😺", "🦊", "🐼", "🐨", "🐸", "🐵", "🐯", "🐶", "🐰"];
 
@@ -22,7 +23,8 @@ export const EmojiLogin = ({ onLogin }: EmojiLoginProps) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-gaming">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <MatrixBackground />
       <Card className="gaming-card w-full max-w-md">
         <CardHeader className="text-center">
           <div className="text-4xl mb-4">⚡</div>
