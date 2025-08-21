@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Poción de Aura Menor",
+    "description": "Una pequeña poción que restaura 10 puntos de Aura.",
+    "price": 50,
+    "image": "/images/potion-green.png",
+    "aura_points": 10
+  },
+  {
+    "id": 2,
+    "name": "Espada de Principiante",
+    "description": "Una espada básica pero fiable para empezar tus aventuras.",
+    "price": 150,
+    "image": "/images/sword-basic.png",
+    "aura_points": 25
+  },
+  {
+    "id": 3,
+    "name": "Escudo de Madera",
+    "description": "Ofrece una protección modesta. Mejor que nada.",
+    "price": 100,
+    "image": "/images/shield-wood.png",
+    "aura_points": 20
+  },
+  {
+    "id": 4,
+    "name": "Gema de Poder",
+    "description": "Una gema que irradia energía. Aumenta tu Aura máxima en 5.",
+    "price": 500,
+    "image": "/images/gem-red.png",
+    "aura_points": 100
+  },
+  {
+    "id": 5,
+    "name": "Arco de Cazador",
+    "description": "Perfecto para ataques a distancia. Ligero y preciso.",
+    "price": 200,
+    "image": "/images/bow-hunter.png",
+    "aura_points": 30
+  },
+  {
+    "id": 6,
+    "name": "Capa de Sigilo",
+    "description": "Te hace más difícil de detectar en la arena.",
+    "price": 350,
+    "image": "/images/cloak-stealth.png",
+    "aura_points": 75
+  }
+]
