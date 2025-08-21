@@ -1,9 +1,11 @@
 import React, { createContext, useContext } from "react";
 import { useGameState } from "@/hooks/useGameState";
+import { Product } from "@/components/ProductCard";
 
 interface GameContextType {
   user: ReturnType<typeof useGameState>['user'];
   cart: ReturnType<typeof useGameState>['cart'];
+  products: Product[];
   login: ReturnType<typeof useGameState>['login'];
   logout: ReturnType<typeof useGameState>['logout'];
   addToCart: ReturnType<typeof useGameState>['addToCart'];

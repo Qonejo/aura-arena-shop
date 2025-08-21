@@ -77,8 +77,8 @@ export const ProductCard = ({
         </div>
       </div>
 
-      <CardHeader className="pb-2">
-        <CardTitle className="font-pixel text-sm leading-relaxed">
+      <CardHeader className="pb-2 flex-grow-0">
+        <CardTitle className="font-pixel text-sm leading-relaxed h-auto">
           {product.nombre}
         </CardTitle>
         {product.descripcion && (
@@ -104,7 +104,7 @@ export const ProductCard = ({
               ))}
             </div>
           ) : (
-            <div className="text-xl font-pixel text-neon-green">
+            <div className="text-lg sm:text-xl font-pixel text-neon-green">
               ${displayPrice}
             </div>
           )}

@@ -25,13 +25,13 @@ export const EmojiLogin = ({ onLogin }: EmojiLoginProps) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <MatrixBackground />
-      <Card className="gaming-card w-full max-w-md">
+      <Card className="gaming-card w-full max-w-md relative z-10">
         <CardHeader className="text-center">
-          <div className="text-4xl mb-4">⚡</div>
-          <CardTitle className="font-pixel text-2xl text-neon-green">
+          <div className="text-3xl sm:text-4xl mb-4">⚡</div>
+          <CardTitle className="font-pixel text-xl sm:text-2xl text-neon-green">
             CorakSmart
           </CardTitle>
-          <CardDescription className="text-muted-foreground">
+          <CardDescription className="text-xs sm:text-sm text-muted-foreground">
             Selecciona tu avatar y entra a la tienda
           </CardDescription>
         </CardHeader>
@@ -45,7 +45,7 @@ export const EmojiLogin = ({ onLogin }: EmojiLoginProps) => {
                 <Button
                   key={emoji}
                   variant={selectedEmoji === emoji ? "default" : "outline"}
-                  className={`gaming-button aspect-square text-2xl p-0 ${
+                  className={`gaming-button aspect-square text-xl sm:text-2xl p-0 ${
                     selectedEmoji === emoji ? "aura-glow" : ""
                   }`}
                   onClick={() => setSelectedEmoji(emoji)}

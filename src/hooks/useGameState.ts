@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { products, getUserLevel, getNextLevel } from "@/lib/gameData";
+import { useState, useCallback, useEffect } from "react";
+import { getUserLevel, getNextLevel } from "@/lib/gameData";
 import { Product } from "@/components/ProductCard";
 import { AuraLevel } from "@/components/AuraProgress";
 
@@ -19,6 +19,25 @@ export interface CartItem {
 export const useGameState = () => {
   const [user, setUser] = useState<GameUser | null>(null);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:5001/api/products');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data: Product[] = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+        // Podríamos establecer un estado de error aquí para mostrarlo en la UI
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const login = useCallback((emoji: string, password: string) => {
     // Mock login - in real app, this would authenticate with backend
@@ -56,7 +75,7 @@ export const useGameState = () => {
         return [...prev, { product, quantity: 1, variation }];
       }
     });
-  }, []);
+  }, [products]);
 
   const removeFromCart = useCallback((productId: string, variation?: string) => {
     setCart(prev => {
@@ -104,6 +123,7 @@ export const useGameState = () => {
   return {
     user,
     cart,
+    products,
     login,
     logout,
     addToCart,

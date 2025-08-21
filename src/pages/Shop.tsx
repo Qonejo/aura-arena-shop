@@ -1,7 +1,6 @@
 import { GameHeader } from "@/components/GameHeader";
 import { ProductCard } from "@/components/ProductCard";
 import { AuraProgress } from "@/components/AuraProgress";
-import { products } from "@/lib/gameData";
 import { useGame } from "@/contexts/GameContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +11,7 @@ export const Shop = () => {
   const { 
     user, 
     cart, 
+    products,
     addToCart, 
     removeFromCart, 
     getCartTotal, 
